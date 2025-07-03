@@ -14,6 +14,7 @@ export default function SearchBox(){
         const res = await fetch(`${Api_URL}?q=${city}&appid=${Api_KEY}&units=metric`);
         const jsonResponse = await res.json();
         let result = {
+             city:city,
              temp: jsonResponse.main.temp,
              tempMin: jsonResponse.main.temp_min,
              tempMax: jsonResponse.main.temp_max,
