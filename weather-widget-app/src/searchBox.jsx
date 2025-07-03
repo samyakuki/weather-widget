@@ -45,6 +45,7 @@ export default function SearchBox({updateInfo}){
     }
     return <>
     <form onSubmit={handleSubmit}>
+     {city === "" && <h4>Enter the city name for weather info</h4>}
         <TextField id="outlined-basic" label="city" variant="outlined" value={city} onChange={handleChange} required/>
         <br></br><br></br>
         <Button variant="contained" type="Submit" >Search</Button>
